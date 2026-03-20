@@ -1,0 +1,20 @@
+name: Docker Build Test
+
+on: # cand ruleaza
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # serverul pe care lucreaza
+
+    steps:
+      - name: Checkout code # copiaza din repository pe serverul Git
+        uses: actions/checkout@v4
+      - name: Set up Docker Buildx # configurare docker
+        uses: docker/setup-buildx-action@v3
+      - name: Build Docker image # test
+        run: |
+          docker build -t sentiment-api:test .
