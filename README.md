@@ -1,4 +1,4 @@
-# Sentiment Analyser (Proiect Personal / MLOps)
+# Sentiment Analyser
 
 Acesta este un proiect pentru a învăța cum să pun un model de AI într-un mediu propriu.
 
